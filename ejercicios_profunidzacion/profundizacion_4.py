@@ -33,3 +33,62 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+
+
+# Palabras
+
+palabra_1 = str(input('Ingrese la primera palabra:\n'))
+
+palabra_2 = str(input('Ingrese la segunda palabra:\n'))
+
+palabra_3 = str(input('Ingrese la tercera palabra:\n'))
+
+
+# Tipo de orden alfabetico
+
+orden = int(input('Ingrese 1 si quiere ordenar las palabras alfabeticamente o 2 si quiere que se orden por cantidad de letras:\n'))
+
+if orden == 1:
+    if palabra_1 > palabra_2 and palabra_1 > palabra_3:
+        if palabra_2 > palabra_3:
+            print(palabra_1, palabra_2, palabra_3)    
+        else:
+            print(palabra_1, palabra_3, palabra_2)
+    
+    if palabra_2 > palabra_1 and palabra_2 > palabra_3:
+        if palabra_1 > palabra_3:
+            print(palabra_2, palabra_1, palabra_3)    
+        else:
+            print(palabra_2, palabra_3, palabra_1)
+    
+    if palabra_3 > palabra_1 and palabra_3 > palabra_2:
+        if palabra_1 > palabra_2:
+            print(palabra_3, palabra_1, palabra_2)    
+        else:
+            print(palabra_3, palabra_2, palabra_1)
+
+
+
+# Tipo de orden por cantidad
+
+if orden == 2:
+    if len(palabra_1) > len(palabra_2) and len(palabra_1) > len(palabra_3):
+        if len(palabra_2) > len(palabra_3):
+            print(palabra_1, palabra_2, palabra_3)    
+        else:
+            print(palabra_1, palabra_3, palabra_2)
+    
+    if len(palabra_2) > len(palabra_1) and len(palabra_2) > len(palabra_3):
+        if len(palabra_1) > len(palabra_3):
+            print(palabra_2, palabra_1, palabra_3)    
+        else:
+            print(palabra_2, palabra_3, palabra_1)
+    
+    if len(palabra_3) > len(palabra_1) and len(palabra_3) > len(palabra_2):
+        if len(palabra_1) > len(palabra_2):
+            print(palabra_3, palabra_1, palabra_2)    
+        else:
+            print(palabra_3, palabra_2, palabra_1)
+
+    
+    
